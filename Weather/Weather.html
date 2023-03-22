@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Weather</title>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+
+    #weather {
+      width: 40%;
+      min-width: 500px;
+      /*height: 600px;*/
+      margin: auto;
+      padding: 10px;
+      background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 30% 30% 40%;
+    }
+
+    #date, #city {
+      color: white;
+      font-size: 18pt;
+      height: 18pt;
+      margin: 10px;
+    }
+
+    #city {
+      text-align: right;
+    }
+
+    #date, #param, #choseCity {
+      grid-column: span 2;
+    }
+
+    #temp {
+      font-size: 55pt;
+      text-align: center;
+      color: yellow;
+      align-content: space-around;
+    }
+
+    #minMaxTemp {
+      padding-left: 10px;
+      line-height: 30pt;
+    }
+
+    figure {
+      text-align: center;
+      margin: 0;
+
+    }
+
+    #param, #sun {
+      padding: 10px;
+      font-size: 16pt;
+      color: purple;
+    }
+
+    label {
+      font-size: 16pt;
+      color: purple;
+      padding-left: 10px;
+    }
+
+    button {
+      width: 80%;
+      margin: auto;
+    }
+
+    hr {
+      grid-column: span 3;
+      width: 100%
+    }
+
+  </style>
+</head>
+<body>
+<main id="weather">
+  <div id="date"></div>
+  <div id="city"></div>
+  <div id="temp"></div>
+  <div id="minMaxTemp">
+    <div id="min" style="color: darkblue"></div>
+    <div id="max" style="color: red"></div>
+  </div>
+  <figure>
+    <img src="" alt="icon">
+  </figure>
+  <div id="param">
+    <div id="wind"></div>
+    <div id="press"></div>
+    <div id="humidity"></div>
+  </div>
+  <div id="sun">
+    <div id="sunrise"></div>
+    <div id="sunset"></div>
+  </div>
+
+  <hr>
+  <label for="chooseCity">Choose City</label>
+  <select id="chooseCity" name="chooseCity">
+    <option value="Kyiv">Kyiv</option>
+    <option value="Vinnitsa">Vinnitsa</option>
+    <option value="Dnipro">Dnipro</option>
+    <option value="Donetsk">Donetsk</option>
+    <option value="Mariupol">Mariupol</option>
+    <option value="Zhytomyr">Zhytomyr</option>
+    <option value="Zaporizhzhia">Zaporizhzhia</option>
+    <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+    <option value="Kropyvnytskyi">Kropyvnytskyi</option>
+    <option value="Luhansk">Luhansk</option>
+    <option value="Lutsk">Lutsk</option>
+    <option value="Lviv">Lviv</option>
+    <option value="Mykolaiv">Mykolaiv</option>
+    <option value="Odesa">Odesa</option>
+    <option value="Poltava">Poltava</option>
+    <option value="Rivne">Rivne</option>
+    <option value="Sumy">Sumy</option>
+    <option value="Ternopil">Ternopil</option>
+    <option value="Uzhhorod">Uzhhorod</option>
+    <option value="Kharkiv">Kharkiv</option>
+    <option value="Kherson">Kherson</option>
+    <option value="Khmelnytskyi">Khmelnytskyi</option>
+    <option value="Cherkasy">Cherkasy</option>
+    <option value="Chernihiv">Chernihiv</option>
+    <option value="Chernivtsi">Chernivtsi</option>
+    <option value="Simferopol">Simferopol</option>
+
+  </select>
+  <button>Geolocation</button>
+</main>
+
+
+<div id="lat"></div>
+<div id="lon"></div>
+<div id="url"></div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
